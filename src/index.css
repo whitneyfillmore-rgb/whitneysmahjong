@@ -1,0 +1,41 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+*, *::before, *::after {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: 'DM Sans', system-ui, sans-serif;
+  background-color: #faf8f3;
+  color: #1a3a6b;
+  margin: 0;
+  padding: 0;
+}
+
+input[type="date"]::-webkit-calendar-picker-indicator {
+  opacity: 0.5;
+  cursor: pointer;
+}
+
+@keyframes float {
+  0% { transform: translateY(0px) rotate(0deg); }
+  100% { transform: translateY(-18px) rotate(6deg); }
+}
+@keyframes float2 {
+  0% { transform: translateY(0px) rotate(0deg); }
+  100% { transform: translateY(-12px) rotate(-4deg); }
+}
+@keyframes float3 {
+  0% { transform: translateY(0px) rotate(2deg); }
+  100% { transform: translateY(-22px) rotate(-2deg); }
+}
+
+.tile-float-1 { animation: float 5s ease-in-out infinite alternate; }
+.tile-float-2 { animation: float2 6s ease-in-out infinite alternate; }
+.tile-float-3 { animation: float3 4.5s ease-in-out infinite alternate; }
